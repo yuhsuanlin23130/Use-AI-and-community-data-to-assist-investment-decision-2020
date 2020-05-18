@@ -1,0 +1,12 @@
+TAIEX: 大盤
+tsmc
+umc: 聯電
+MediaTek: 聯發科
+
+dataset
+3. keyword extraction: 標題內容含2個以上關鍵詞 +去重複 (效果不好，就不用了)
+4. keyword extraction: 4 關鍵詞in標題+去重複 v
+5. dataset4 再加上newDate欄位
+   *newDate欄位: 因為股市週末假日不開盤，所以把有開盤的每一天由1開始依序編號
+    第三部分回測時，用第n天文章去預測第n+1天股價漲跌
+    周一股價漲跌則用週五週六週日文章去預測 (所以週五週六週日文章的編號是一樣的)
