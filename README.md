@@ -1,4 +1,4 @@
-## 說明
+### 說明
 用AI及社群數據協助股票投資決策: 在資訊不對稱的群眾市場，以人工智慧語意技術，分析新聞與論壇內容的消息情報後，進行股價預測。 因為股票市場由群眾決定，因此分析群眾所反映的想法，即可預測市場。         
 
 本專題針對科技業半導體個股，選擇討論量大、股價波動大的台積電、聯電、聯發科與大盤指數四支股票。 文本集來自2016到2018年Ptt BBS Stock論壇、mobile01投資與理財(生活娛樂)論壇、yahoo股市重大要聞與最新財經新聞。 先將文本集以n-gram(n=2~6)斷詞，去除包含英文、數字與停用詞、DF小於等於10的gram，並以標題含有人工設定的種子關鍵字過濾出各支股票的看漲與看跌文章集合，根據TF-IDF指標各自從看漲與看跌文章集篩選出看漲與看跌關鍵字。          
@@ -15,16 +15,16 @@ Possible Future Work
 * 可先用分群演算法觀察分群結果        
 個人認為若做以上修正，有望大幅提升移動回測準確率。
 
-## 執行環境
+### 執行環境
 Python3.7 + Jupyter Notebook
 
-## 目錄結構說明
+### 目錄結構說明
 #### 資料前處理
-./keyword_extraction/dataset為Ptt BBS Stock論壇、mobile01投資與理財論壇、yahoo股市新聞之原始文章集。
-執行./keyword_extraction/keyword_extraction_fin_min.py，生成各股票看漲/看跌文章集與看漲/看跌keywords。經整理後儲存在./keyword_dataset資料夾。
+keyword_extraction/dataset為Ptt BBS Stock論壇、mobile01投資與理財論壇、yahoo股市新聞之原始文章集。
+執行keyword_extraction/keyword_extraction_fin_min.py，生成各股票看漲/看跌文章集與看漲/看跌keywords。經整理後儲存在keyword_dataset資料夾。
 #### 模型訓練
-./model_training.py，讀取整理後的看漲/看跌文章集與看漲/看跌keywords，建構RF、KNN、SVM三種分類模型並顯示分類結果。
+model_training.py，讀取整理後的看漲/看跌文章集與看漲/看跌keywords，建構RF、KNN、SVM三種分類模型並顯示分類結果。
 #### 移動回測
-./backtesting v2.py，移動回測結果儲存在backtesting_result資料夾中。
+backtesting v2.py，移動回測結果儲存在backtesting_result資料夾中。
 
 
