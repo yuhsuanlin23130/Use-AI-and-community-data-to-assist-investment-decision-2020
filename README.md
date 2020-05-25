@@ -20,7 +20,7 @@ Python3.7 + Jupyter Notebook
 
 ### 目錄結構說明
 #### 資料前處理
-keyword_extraction/dataset為Ptt BBS Stock論壇、mobile01投資與理財論壇、yahoo股市新聞之原始文章集。
+keyword_extraction/dataset為Ptt BBS Stock論壇(bbs.csv)、mobile01投資與理財論壇(forum.csv)、yahoo股市新聞(news.csv)之原始文章集。壓縮檔請解壓縮。
 執行keyword_extraction/keyword_extraction_fin_min.py，生成各股票看漲/看跌文章集與看漲/看跌keywords。經整理後儲存在keyword_dataset資料夾。
 #### 模型訓練
 model_training.py，讀取整理後的看漲/看跌文章集與看漲/看跌keywords，建構RF、KNN、SVM三種分類模型並顯示分類結果。
